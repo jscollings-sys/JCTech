@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Local, friendly tech support and minor home fixes in Lymington, Pennington and the New Forest.">
+  <meta name="description" content="Local, friendly tech support and minor home fixes, based in Lymington and serving the surrounding New Forest area.">
   <title>About | JC Tech &amp; Home Fix</title>
   <style>
     :root {
@@ -26,7 +26,7 @@
     .site-header { position: relative; z-index: 1; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .96); }
     .header-inner { width: min(1120px, calc(100% - 48px)); min-height: 78px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--blue-deep); text-decoration: none; font-size: 17px; font-weight: 750; letter-spacing: 0; white-space: nowrap; }
-    .brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 9px; background: var(--blue); color: white; font-size: 14px; font-weight: 800; }
+    .brand-logo { display: grid; width: 58px; height: 58px; place-items: center; object-fit: contain; }
     .main-nav { display: flex; align-items: center; gap: 32px; }
     .main-nav a { padding: 8px 0; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 650; transition: color .18s ease; }
     .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--blue); }
@@ -52,7 +52,7 @@
     @media (max-width: 680px) {
       .header-inner { width: min(100% - 32px, 1120px); min-height: 72px; gap: 12px; }
       .brand { gap: 8px; font-size: 14px; }
-      .brand-mark { width: 34px; height: 34px; }
+      .brand-logo { width: 48px; height: 48px; }
       .main-nav { gap: 16px; }
       .main-nav a { font-size: 13px; }
       .wrap { width: min(100% - 32px, 1120px); }
@@ -77,7 +77,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="JC Tech & Home Fix home">
-        <span class="brand-mark" aria-hidden="true">JC</span>
+        <img class="brand-logo" src="JCTech%26HomeFixLogo.png" alt="">
         <span>JC Tech &amp; Home Fix</span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
@@ -100,17 +100,13 @@
       <div class="wrap about-grid">
         <div class="about-copy">
           <h2>Here to make everyday things easier.</h2>
-          <p>JC Tech &amp; Home Fix serves Lymington, Pennington and the New Forest. We come to you, helping with the technology and small household jobs that can interrupt your day.</p>
-          <p>There’s no confusing tech jargon and no expectation that you already know the right words. We explain what’s happening in plain English, talk through the options and make sure you feel comfortable with the work.</p>
-          <p>From a device that won’t cooperate to a minor fix around the home, we believe no job is too small to deserve care and attention.</p>
+          <p>I’m based in Lymington and serve the surrounding New Forest area, bringing friendly, reliable tech support and minor home fixes straight to your door.</p>
+          <p>I’m local, approachable and happy to help, with no confusing tech jargon. I’ll explain what’s happening in plain English and can show you how to use your devices and get the most from your technology.</p>
+          <p>From a device that won’t cooperate to a minor fix around the home, I believe no job is too small to deserve care and attention.</p>
         </div>
         <aside class="service-area">
           <h2>On your doorstep</h2>
-          <ul class="area-list">
-            <li>Lymington</li>
-            <li>Pennington</li>
-            <li>The New Forest</li>
-          </ul>
+          <p>Based in Lymington, serving the surrounding New Forest area.</p>
         </aside>
       </div>
     </section>
@@ -119,7 +115,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>JC Tech &amp; Home Fix</span>
-      <span>Serving Lymington, Pennington &amp; the New Forest</span>
+      <span><a href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
     </div>
   </footer>
 </body>

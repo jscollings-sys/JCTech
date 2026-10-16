@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Get in touch with JC Tech & Home Fix for mobile tech support and minor home fixes in the New Forest area.">
+  <meta name="description" content="Get in touch with JC Tech & Home Fix, based in Lymington and serving the surrounding New Forest area.">
   <title>Contact Us | JC Tech &amp; Home Fix</title>
   <style>
     :root {
@@ -26,7 +26,7 @@
     .site-header { position: relative; z-index: 1; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .96); }
     .header-inner { width: min(1120px, calc(100% - 48px)); min-height: 78px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--blue-deep); text-decoration: none; font-size: 17px; font-weight: 750; letter-spacing: 0; white-space: nowrap; }
-    .brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 9px; background: var(--blue); color: white; font-size: 14px; font-weight: 800; }
+    .brand-logo { display: grid; width: 58px; height: 58px; place-items: center; object-fit: contain; }
     .main-nav { display: flex; align-items: center; gap: 32px; }
     .main-nav a { padding: 8px 0; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 650; transition: color .18s ease; }
     .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--blue); }
@@ -41,6 +41,7 @@
     .contact-section { padding: 42px 0 78px; }
     .contact-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(250px, .7fr); align-items: start; gap: 64px; }
     .form-heading { margin-bottom: 23px; color: var(--blue-deep); font-size: 24px; font-weight: 700; }
+    .form-note { margin: -12px 0 22px; color: var(--muted); font-size: 13px; }
     .contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 18px; }
     .field { display: flex; flex-direction: column; gap: 6px; }
     .field-full { grid-column: 1 / -1; }
@@ -79,6 +80,7 @@
     .service-area { padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--mist); }
     .service-area h2 { margin-bottom: 10px; font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; font-size: 18px; font-weight: 750; }
     .service-area p { margin-bottom: 18px; color: var(--muted); font-size: 14px; }
+    .email-link { color: var(--blue); font-weight: 700; overflow-wrap: anywhere; }
     .area-list { margin: 0; padding: 0; list-style: none; }
     .area-list li { padding: 10px 0; border-top: 1px solid var(--line); color: var(--blue); font-size: 14px; font-weight: 650; }
     .site-footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
@@ -86,7 +88,7 @@
     @media (max-width: 680px) {
       .header-inner { width: min(100% - 32px, 1120px); min-height: 72px; gap: 12px; }
       .brand { gap: 8px; font-size: 14px; }
-      .brand-mark { width: 34px; height: 34px; }
+      .brand-logo { width: 48px; height: 48px; }
       .main-nav { gap: 16px; }
       .main-nav a { font-size: 13px; }
       .wrap { width: min(100% - 32px, 1120px); }
@@ -113,7 +115,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="JC Tech & Home Fix home">
-        <span class="brand-mark" aria-hidden="true">JC</span>
+        <img class="brand-logo" src="JCTech%26HomeFixLogo.png" alt="">
         <span>JC Tech &amp; Home Fix</span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
@@ -136,7 +138,8 @@
       <div class="wrap contact-grid">
         <div>
           <h2 class="form-heading">Send a request</h2>
-          <form class="contact-form" action="contact.html" method="post">
+          <p class="form-note">Submitting opens your email app with the request ready to send.</p>
+          <form class="contact-form" id="contact-form">
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" autocomplete="name" required>
@@ -167,12 +170,8 @@
         </div>
         <aside class="service-area">
           <h2>Local, mobile service</h2>
-          <p>We bring friendly help to your door across:</p>
-          <ul class="area-list">
-            <li>Lymington</li>
-            <li>Pennington</li>
-            <li>The New Forest</li>
-          </ul>
+          <p>Based in Lymington, we bring friendly help to your door across the surrounding New Forest area.</p>
+          <p style="margin: 20px 0 0;">Email: <a class="email-link" href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a></p>
         </aside>
       </div>
     </section>
@@ -181,8 +180,25 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>JC Tech &amp; Home Fix</span>
-      <span>Serving Lymington, Pennington &amp; the New Forest</span>
+      <span><a class="email-link" href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
     </div>
   </footer>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const details = [
+        `Name: ${form.get("name")}`,
+        `Email: ${form.get("email")}`,
+        `Phone: ${form.get("phone") || "Not provided"}`,
+        `Service needed: ${form.get("service")}`,
+        "",
+        "Message:",
+        form.get("message")
+      ].join("\n");
+      const subject = `Website enquiry: ${form.get("service")}`;
+      window.location.href = `mailto:jordan@jctechfix.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(details)}`;
+    });
+  </script>
 </body>
 </html>

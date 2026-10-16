@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Friendly, reliable mobile tech support and minor home electrical repairs in Lymington, Pennington and the New Forest.">
+  <meta name="description" content="Friendly mobile tech support and minor home repairs, based in Lymington and serving the surrounding New Forest area.">
   <title>JC Tech &amp; Home Fix | Mobile Tech Support &amp; Home Repairs</title>
   <style>
     :root {
@@ -57,16 +57,12 @@
       letter-spacing: 0;
       white-space: nowrap;
     }
-    .brand-mark {
+    .brand-logo {
       display: grid;
-      width: 38px;
-      height: 38px;
+      width: 58px;
+      height: 58px;
       place-items: center;
-      border-radius: 9px;
-      background: var(--blue);
-      color: white;
-      font-size: 14px;
-      font-weight: 800;
+      object-fit: contain;
     }
     .main-nav { display: flex; align-items: center; gap: 32px; }
     .main-nav a {
@@ -195,7 +191,7 @@
     @media (max-width: 680px) {
       .header-inner { width: min(100% - 32px, 1120px); min-height: 72px; gap: 12px; }
       .brand { gap: 8px; font-size: 14px; }
-      .brand-mark { width: 34px; height: 34px; }
+      .brand-logo { width: 48px; height: 48px; }
       .main-nav { gap: 16px; }
       .main-nav a { font-size: 13px; }
       .wrap { width: min(100% - 32px, 1120px); }
@@ -225,7 +221,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="JC Tech & Home Fix home">
-        <span class="brand-mark" aria-hidden="true">JC</span>
+        <img class="brand-logo" src="JCTech%26HomeFixLogo.png" alt="">
         <span>JC Tech &amp; Home Fix</span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
@@ -273,11 +269,11 @@
         <div class="pricing-copy">
           <p class="eyebrow">Straightforward pricing</p>
           <h2>Clear help, with no surprises.</h2>
-          <p>Software issues are covered by our No Fix, No Fee guarantee. If we can't resolve the software problem, you won't pay for the first hour.</p>
+          <p>The £70 call-out fee includes the first hour of work. Software issues are covered by our No Fix, No Fee guarantee: if I can't resolve the software problem, you won't pay for the first-hour work.</p>
         </div>
         <div class="price">
           <strong>£70</strong>
-          <span>first hour</span>
+          <span>call-out fee, including the first hour</span>
         </div>
       </div>
     </section>
@@ -286,7 +282,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>JC Tech &amp; Home Fix</span>
-      <span>Serving Lymington, Pennington &amp; the New Forest</span>
+      <span><a href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
     </div>
   </footer>
 </body>
