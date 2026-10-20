@@ -45,6 +45,8 @@
     .about-copy p:last-child { margin-bottom: 0; }
     .service-area { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--mist); }
     .service-area h2 { margin-bottom: 14px; font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; font-size: 18px; font-weight: 750; }
+    .phone-link { color: var(--blue); font-weight: 750; text-decoration: none; }
+    .phone-link:hover { text-decoration: underline; }
     .area-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
     .area-list li { padding: 6px 10px; border: 1px solid #d2e0e5; border-radius: 5px; background: white; color: var(--blue); font-size: 13px; font-weight: 650; }
     .site-footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
@@ -107,6 +109,7 @@
         <aside class="service-area">
           <h2>On your doorstep</h2>
           <p>Based in Lymington, serving the surrounding New Forest area.</p>
+          <p>Call: <a class="phone-link" href="tel:+447360102783">07360 102783</a></p>
         </aside>
       </div>
     </section>
@@ -115,7 +118,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>JC Tech &amp; Home Fix</span>
-      <span><a href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
+      <span><a class="phone-link" href="tel:+447360102783">07360 102783</a> · <a href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
     </div>
   </footer>
 </body>

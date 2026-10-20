@@ -132,6 +132,10 @@
       transition: background .18s ease, transform .18s ease;
     }
     .button:hover { transform: translateY(-2px); background: var(--blue-deep); }
+    .text-button { display: inline-flex; min-height: 48px; align-items: center; padding: 0 8px; color: var(--blue); text-decoration: none; font-size: 14px; font-weight: 750; }
+    .text-button:hover, .phone-link:hover { text-decoration: underline; }
+    .hero-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .phone-link { color: var(--blue); font-weight: 750; text-decoration: none; white-space: nowrap; }
     .section { padding: 74px 0; }
     .section-heading { max-width: 650px; margin-bottom: 34px; }
     .section-heading h2, .pricing-copy h2 {
@@ -238,7 +242,10 @@
         <p class="eyebrow">Local help, right at your door</p>
         <h1>Friendly, reliable mobile tech support &amp; minor home electrical repairs at your door.</h1>
         <p class="hero-copy">Practical help with the devices you rely on and those small home fixes that are easy to put off.</p>
-        <a class="button" href="contact.html">Get in Touch</a>
+        <div class="hero-actions">
+          <a class="button" href="tel:+447360102783">Call 07360 102783</a>
+          <a class="text-button" href="contact.html">Contact Us</a>
+        </div>
       </div>
     </section>
 
@@ -282,7 +289,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>JC Tech &amp; Home Fix</span>
-      <span><a href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
+      <span><a class="phone-link" href="tel:+447360102783">07360 102783</a> · <a href="mailto:jordan@jctechfix.com">jordan@jctechfix.com</a> · Based in Lymington, serving the surrounding New Forest area</span>
     </div>
   </footer>
 </body>
